@@ -5,27 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vantik</title>
   <link rel="stylesheet" href="./dist/output.css">
-</head>   
+</head>
 
 
 <body class="bg-[#0B0D17] text-white antialiased">
 
-  <!-- 
-    UPGRADE: STICKY FROSTED HEADER
-    TEACHING TIPS:
-    - `sticky top-0 z-50`: Keeps header pinned at the very top layered above everything else.
-    - `bg-[#0B0D17]/80 backdrop-blur-md`: This is the magic combo! It makes the header 80% opaque 
-      and blurs any content scrolling behind it for an ultra-modern glass effect.
-  -->
   <header class="sticky top-0 z-50 w-full flex items-center justify-between px-6 sm:px-12 md:px-24 py-5 bg-[#0B0D17]/80 backdrop-blur-md border-b border-white/5">
-    <!-- Logo Section -->
     <a href="index.html" class="block group">
       <h1 class="text-white text-2xl font-black tracking-wider transition-all duration-300 group-hover:text-indigo-400 drop-shadow-[0_0_12px_rgba(129,140,248,0.3)]">
         Vantik<span class="text-indigo-500">.</span>
       </h1>
     </a>
 
-    <!-- Navigation Links -->
     <nav class="hidden sm:block">
       <ul class="flex items-center gap-8 text-sm font-medium tracking-wide text-gray-400">
         <li>
@@ -43,24 +34,32 @@
       </ul>
     </nav>
 
-    <!-- Quick Action -->
     <div class="flex items-center gap-4">
       <a href="shop.html" class="hidden sm:inline-block text-xs uppercase tracking-widest text-indigo-400 font-bold hover:text-indigo-300 transition-colors">
         View Products &rarr;
       </a>
+      <button id="menu-toggle" class="sm:hidden text-white text-2xl" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero" style="background-image: url('./images/hero.jpg');" class="relative w-full min-h-[600px] bg-[#0B0D17] bg-cover bg-right bg-no-repeat flex items-center px-6 sm:px-12 md:px-24 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#0B0D17] via-[#0B0D17]/85 to-transparent z-10"></div>
-    <div class="relative max-w-xl text-white space-y-6 z-20">
+  <div id="mobile-menu" class="hidden sm:hidden bg-[#0B0D17] border-b border-white/5 px-6 py-4">
+    <ul class="flex flex-col gap-4 text-sm font-medium text-gray-300">
+      <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+      <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
+      <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+      <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+    </ul>
+  </div>
+
+  <section id="hero" style="background-image: url('./images/hero.jpg');" class="relative w-full min-h-[420px] sm:min-h-[600px] bg-[#0B0D17] bg-cover bg-center sm:bg-right bg-no-repeat flex items-center px-6 sm:px-12 md:px-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[#0B0D17]/70 sm:bg-gradient-to-r sm:from-[#0B0D17] sm:via-[#0B0D17]/85 sm:to-transparent z-10"></div>
+    <div class="relative max-w-xl text-white space-y-4 sm:space-y-6 z-20">
       <div class="w-12 h-[2px] bg-indigo-500"></div>
-      <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
         Built for focus.<br>
         <span class="text-gray-400">Designed for dark.</span>
       </h2>
-      <p class="text-base sm:text-lg text-gray-400 max-w-md leading-relaxed">
+      <p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-md leading-relaxed">
         Minimal tech accessories for the modern desk setup.
       </p>
       <div class="pt-2">
@@ -71,29 +70,19 @@
     </div>
   </section>
 
-  <!-- 
-    UPGRADE: MINIMALIST FEATURES GRID
-    TEACHING TIPS:
-    - `max-w-7xl mx-auto`: Keeps your content centered and prevents it from stretching too wide on massive monitors.
-    - `grid grid-cols-1 md:grid-cols-3`: On mobile, features stack vertically. On desktops, they split evenly into 3 columns.
-    - `border border-white/5 bg-white/[0.02]`: Gives a very elegant, soft dark card wrapper to separate the sections visually.
-  -->
-  <section id="features" class="max-w-7xl mx-auto px-6 sm:px-12 md:px-24 py-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Feature 1 -->
-      <div class="p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
+  <section id="features" class="max-w-7xl mx-auto px-6 sm:px-12 md:px-24 py-12 sm:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+      <div class="p-5 sm:p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
         <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4 font-bold">✓</div>
         <h3 class="text-lg font-bold text-white mb-2">Fast Shipping</h3>
         <p class="text-sm text-gray-400">Delivered within 2-4 business days.</p>
       </div>
-      <!-- Feature 2 -->
-      <div class="p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
+      <div class="p-5 sm:p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
         <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4 font-bold">✓</div>
         <h3 class="text-lg font-bold text-white mb-2">Quality Guaranteed</h3>
         <p class="text-sm text-gray-400">Every product tested before it ships.</p>
       </div>
-      <!-- Feature 3 -->
-      <div class="p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
+      <div class="p-5 sm:p-6 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors duration-300">
         <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4 font-bold">✓</div>
         <h3 class="text-lg font-bold text-white mb-2">Easy Returns</h3>
         <p class="text-sm text-gray-400">30-day hassle-free return policy.</p>
@@ -101,15 +90,9 @@
     </div>
   </section>
 
-  <!-- 
-    UPGRADE: PREMIUM NEWSLETTER SECTION
-    TEACHING TIPS:
-    - `flex flex-col sm:flex-row`: Puts the input field and submit button side-by-side on desktop, but safely stacks them on mobile.
-    - `focus:outline-none focus:ring-2`: Adds a beautiful glowing ring around the text field when a user clicks into it.
-  -->
-  <section id="newsletter" class="max-w-4xl mx-auto px-6 py-20 text-center border-t border-white/5">
+  <section id="newsletter" class="max-w-4xl mx-auto px-6 py-12 sm:py-20 text-center border-t border-white/5">
     <div class="space-y-4 max-w-md mx-auto">
-      <h3 class="text-2xl sm:text-3xl font-bold tracking-tight">Stay in the loop</h3>
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Stay in the loop</h3>
       <p class="text-sm text-gray-400">Get notified about new products and exclusive drop details.</p>
       
       <form class="flex flex-col sm:flex-row gap-3 pt-4">
@@ -129,16 +112,9 @@
     </div>
   </section>
 
-  <!-- 
-    UPGRADE: PROFESSIONAL DEEP FOOTER
-    TEACHING TIPS:
-    - `grid grid-cols-2 md:grid-cols-5`: Creates columns that look perfectly proportioned across screens.
-    - `col-span-2`: Makes the first company description block wider than the standard category link blocks.
-  -->
-  <footer class="w-full bg-[#07080E] border-t border-white/5 px-6 sm:px-12 md:px-24 py-16 text-sm text-gray-400">
-    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+  <footer class="w-full bg-[#07080E] border-t border-white/5 px-6 sm:px-12 md:px-24 py-10 sm:py-16 text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-12">
       
-      <!-- Company Pitch Column -->
       <div class="col-span-2 space-y-4">
         <h4 class="text-white text-lg font-black tracking-wider">Vantik<span class="text-indigo-500">.</span></h4>
         <p class="max-w-xs text-xs leading-relaxed">
@@ -146,7 +122,6 @@
         </p>
       </div>
 
-      <!-- Shop Column -->
       <div class="space-y-3">
         <h4 class="text-white font-semibold text-xs uppercase tracking-wider">Shop</h4>
         <ul class="space-y-2 text-xs">
@@ -156,7 +131,6 @@
         </ul>
       </div>
 
-      <!-- Company Column -->
       <div class="space-y-3">
         <h4 class="text-white font-semibold text-xs uppercase tracking-wider">Company</h4>
         <ul class="space-y-2 text-xs">
@@ -166,7 +140,6 @@
         </ul>
       </div>
 
-      <!-- Follow Column -->
       <div class="space-y-3">
         <h4 class="text-white font-semibold text-xs uppercase tracking-wider">Follow</h4>
         <ul class="space-y-2 text-xs">
@@ -177,7 +150,6 @@
 
     </div>
 
-    <!-- Copyright Area -->
     <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 text-center md:text-left text-xs text-gray-600 flex flex-col md:flex-row justify-between gap-4">
       <p>&copy; 2026 Vantik. All rights reserved.</p>
       <div class="flex justify-center gap-6">
@@ -186,6 +158,9 @@
       </div>
     </div>
   </footer>
+
+<script type="module" src="./scripts/app.js"></script>
+
 
 </body>
 </html>
