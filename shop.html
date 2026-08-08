@@ -11,7 +11,7 @@
     <header class="sticky top-0 z-50 w-full flex items-center justify-between px-6 sm:px-12 md:px-24 py-5 bg-[#0B0D17]/80 backdrop-blur-md border-b border-white/5">
         <!-- Logo -->
         <a href="index.html" class="block group">
-            <h1 class="text-white text-2xl font-black tracking-wider transition-all duration-300 group-hover:text-indigo-400 drop-shadow-[0_0_12px_rgba(129,140,248,0.3)]">
+            <h1 class="text-white text-xl sm:text-2xl font-black tracking-wider transition-all duration-300 group-hover:text-indigo-400 drop-shadow-[0_0_12px_rgba(129,140,248,0.3)]">
                 Vantik<span class="text-indigo-500">.</span>
             </h1>
         </a>
@@ -26,8 +26,8 @@
             </ul>
         </nav>
 
-        <!-- Search + Cart -->
-        <div class="flex items-center gap-3">
+        <!-- Search + Cart (desktop) -->
+        <div class="hidden sm:flex items-center gap-3">
             <input id="searchInput" type="search" placeholder="Search for products" class="px-3 py-2 rounded bg-white/5 border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
             <button id="searchButton" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded transition-colors shadow-lg shadow-indigo-600/15">
                 Search
@@ -39,7 +39,38 @@
                 <span class="js-cart-quantity absolute inline-flex items-center justify-center bg-indigo-500 font-semibold text-white shadow-lg z-10" style="top: 0.35rem; right: 0.35rem; transform: translate(35%, -35%); height: 1.28rem; min-width: 1.28rem; padding: 0 0.35rem; font-size: 0.72rem; border-radius: 9999px;">0</span>
             </a>
         </div>
+
+        <!-- Cart + Menu (mobile) -->
+        <div class="flex sm:hidden items-center gap-2">
+            <a href="checkout.html" class="relative inline-flex items-center justify-center rounded hover:bg-white/5 transition" style="width: 2.5rem; height: 2.5rem;" aria-label="Cart">
+                <svg class="text-white block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 1.75rem; height: 1.75rem;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 1.981-4.684 2.58-7.128.075-.3-.155-.575-.463-.575H5.106M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+                <span class="js-cart-quantity absolute inline-flex items-center justify-center bg-indigo-500 font-semibold text-white shadow-lg z-10" style="top: 0.1rem; right: 0.1rem; transform: translate(35%, -35%); height: 1.1rem; min-width: 1.1rem; padding: 0 0.3rem; font-size: 0.65rem; border-radius: 9999px;">0</span>
+            </a>
+            <button id="menu-toggle" class="text-white text-2xl" aria-label="Menu">☰</button>
+        </div>
     </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-[#0B0D17] border-b border-white/5 px-6 py-4">
+        <ul class="flex flex-col gap-4 text-sm font-medium text-gray-300">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- MOBILE SEARCH -->
+    <div class="sm:hidden bg-[#0B0D17] border-b border-white/5 px-6 py-3">
+        <div class="flex gap-2">
+            <input id="searchInputMobile" type="search" placeholder="Search for products" class="flex-1 px-3 py-2 rounded bg-white/5 border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            <button id="searchButtonMobile" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded transition-colors">
+                Search
+            </button>
+        </div>
+    </div>
 
     <!-- PAGE INTRO -->
     <section class="max-w-7xl mx-auto px-6 sm:px-12 md:px-24 pt-10 pb-4">
