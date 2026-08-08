@@ -73,7 +73,6 @@ export const products = [
   }
 ];
 
-// Renders star icons (filled, half, empty) based on a rating number
 export function renderStars(rating) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
