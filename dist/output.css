@@ -502,9 +502,6 @@
   .bg-\[\#E25C3D\] {
     background-color: #E25C3D;
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
-  }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
   }
@@ -690,9 +687,6 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
-  .text-blue-400 {
-    color: var(--color-blue-400);
-  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
@@ -783,19 +777,16 @@
     .group-hover\:text-indigo-400:is(:where(.group):hover *) {
       color: var(--color-indigo-400);
     }
-    .hover\:border-blue-500\/50:hover {
-      border-color: color-mix(in srgb, oklch(62.3% 0.214 259.815) 50%, transparent);
+    .hover\:border-indigo-500\/50:hover {
+      border-color: color-mix(in srgb, oklch(58.5% 0.233 277.117) 50%, transparent);
     }
     @supports (color: color-mix(in lab, red, red)) {
-      .hover\:border-blue-500\/50:hover {
-        border-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
+      .hover\:border-indigo-500\/50:hover {
+        border-color: color-mix(in oklab, var(--color-indigo-500) 50%, transparent);
       }
     }
     .hover\:bg-\[\#c95135\]:hover {
       background-color: #c95135;
-    }
-    .hover\:bg-blue-600:hover {
-      background-color: var(--color-blue-600);
     }
     .hover\:bg-gray-700:hover {
       background-color: var(--color-gray-700);
@@ -831,8 +822,8 @@
     .hover\:text-white:hover {
       color: var(--color-white);
     }
-    .hover\:shadow-\[0_0_20px_rgba\(59\,130\,246\,0\.15\)\]:hover {
-      --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(59,130,246,0.15));
+    .hover\:shadow-\[0_0_20px_rgba\(129\,140\,248\,0\.15\)\]:hover {
+      --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(129,140,248,0.15));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
