@@ -4,17 +4,14 @@ import { cart, saveToStorage, removeFromCart, calculateCartQuantity } from "../c
 import { renderOrderSummary } from './orderSummary.js';
 
 export function renderCartItems() { 
-    // Always update the header cart counter first, since it exists on all pages
     const headerCartQuantityEl = document.querySelector(".js-cart-quantity");
     if (headerCartQuantityEl) {
         headerCartQuantityEl.innerHTML = calculateCartQuantity(); 
     }
 
-    // Fetch the checkout-specific elements
     const cartItemsEl = document.getElementById("cart-items");
     const emptyCartEl = document.getElementById("empty-cart");
 
-    // FIX: If we aren't on the checkout page, stop executing the rest of this function safely
     if (!cartItemsEl) {
         return;
     }
