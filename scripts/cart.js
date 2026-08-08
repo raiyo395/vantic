@@ -20,8 +20,8 @@ export function addToCart(productId, quantity = 1) {
   const headerCartQuantityEl = document.querySelector(".js-cart-quantity"); 
   if (headerCartQuantityEl) { 
     headerCartQuantityEl.innerHTML = calculateCartQuantity(); 
-  } // <-- Fixed closing condition block
-} // <-- THIS WAS MISSING! This closes the addToCart function correctly.
+  }
+} 
 
 export function removeFromCart(productId) { 
   const index = cart.findIndex((item) => String(item.productId) === String(productId)); 
