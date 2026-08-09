@@ -30,24 +30,34 @@ A dark-themed, minimal e-commerce storefront for tech accessories — built with
 ## Project Structure
 
 ```
-├── index.html
-├── shop.html
-├── checkout.html
 ├── data/
 │   └── products.js
+├── dist/
+│   └── output.css
+├── images/
+│   ├── 1.jpg
+│   ├── 2.jpg
+│   ├── 3.jpg
+│   ├── 4.jpg
+│   ├── 5.jpg
+│   ├── 6.jpg
+│   ├── 7.jpg
+│   ├── 8.jpg
+│   └── hero.jpg
 ├── scripts/
-│   ├── app.js
-│   ├── cart.js
-│   ├── renderProducts.js
 │   ├── checkout/
 │   │   ├── cartItems.js
 │   │   └── orderSummary.js
-│   └── utils/
-│       └── money.js
+│   ├── utils/
+│   │   └── money.js
+│   ├── app.js
+│   ├── cart.js
+│   └── renderProducts.js
 ├── src/
 │   └── input.css
-└── dist/
-    └── output.css
+├── checkout.html
+├── index.html
+└── shop.html
 ```
 
 ## Running Locally
